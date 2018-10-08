@@ -9,7 +9,7 @@ Thanks to http://bhami.com/rosetta.html for making a far more useful site and co
 
 Master source: https://github.com/fordsfords/rstone
 
-Live: http://geeky-boy.com/rstone/
+Live copy: http://geeky-boy.com/rstone/
 
 ## License
 
