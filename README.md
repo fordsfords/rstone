@@ -1,5 +1,9 @@
 # rstone
-My rosetta stone.
+My programming rosetta stone.
+Sometimes its hard remember which programming language uses which syntax.
+For example, "endif" -- does Bourne shell use that?  Or does it use "fi"?
+(Spoiler: "fi" is shell.)
+So who uses "endif"?  C pre-processor conditionals.  :-)
 
 Thanks to http://bhami.com/rosetta.html for making a far more useful site and coming up with the name.
 
@@ -9,7 +13,7 @@ Live: http://geeky-boy.com/rstone/
 
 ## License
 
-Copyright 2012, 2015 Steven Ford http://geeky-boy.com and licensed
+Copyright 2012 - 2018 Steven Ford http://geeky-boy.com and licensed
 "public domain" style under
 [CC0](http://creativecommons.org/publicdomain/zero/1.0/):
 ![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png "CC0")
