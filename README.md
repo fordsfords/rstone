@@ -5,7 +5,8 @@ For example, "endif" -- does Bourne shell use that?  Or does it use "fi"?
 (Spoiler: "fi" is shell.)
 So who uses "endif"?  C pre-processor conditionals.  :-)
 
-Thanks to http://bhami.com/rosetta.html for making a far more useful site and coming up with the name.
+Thanks to http://bhami.com/rosetta.html for making a far more useful site
+(and coming up with an awesome name).
 
 Master source: https://github.com/fordsfords/rstone
 
