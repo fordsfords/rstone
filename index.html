@@ -1,26 +1,84 @@
+<html>
 <head><title>rstone</title></head>
-<body><h1>rstone</h1>
+<body>
+<h1>rstone</h1>
 
-<p>This is my Rosetta Stone for a small set of computer languages.</p>
+<p>This is my Rosetta Stone for a small set of computer languages.
+It assumes that you know all these languages very well, but sometimes
+use "elif" when you should use "elsif", and vice versa.</p>
 
 <p>A much more awesome Rosetta Stone for Unixes can be found at
 <a href="http://bhami.com/rosetta.html">http://bhami.com/rosetta.html</a>.</p>
 
-<p> <table border="1" cellpadding="2" cellspacing="2" align="left" bgcolor="#000000">
-<tr bgcolor="#FFFFFF">
-  <td valign="top"><b>Lang</b></td>
-  <td valign="top"><b>for</b></td>
-  <td valign="top"><b>else if</b></td>
-  <td valign="top"><b>function</b></td>
+<table border="1" cellpadding="2" cellspacing="2" bgcolor="#000000">
+<tr align="left" bgcolor="#E0E0E0">
+  <td valign="top"><b>Feature</b></td>
+  <td valign="top"><b>Bash</b></td>
+  <td valign="top"><b>Perl</b></td>
+  <td valign="top"><b>Python</b></td>
 </tr>
-<tr bgcolor="#FFFFFF">
-  <td valign="top">shell (Bash)</td>
-  <td valign="top"><tt>for I in *; do</tt><br><tt>for I in {3..8}; do</tt></td>
-  <td valign="top"><tt>elif</tt></td>
-  <td valign="top"><tt>function E {</tt></td>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>For</b></td>
+  <td valign="top"><pre>for I in *; do
+for I in {3..8}; do</pre></td>
+  <td valign="top"><pre>for (my $i = 3; $i <= 8; $i++) {
+for my $i (@arry) {</pre></td>
+  <td valign="top"><pre>arry = range(3, 8+1)
+for i in arry</pre></td>
 </tr>
-</table> </p><p>&nbsp;</p>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>Else if</b></td>
+  <td valign="top"><pre>elif [$I -eq 3]</pre></td>
+  <td valign="top"><pre>elsif ($i eq 3) {</pre></td>
+  <td valign="top"><pre>elif i == 3:</pre></td>
+</tr>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>Function</b></td>
+  <td valign="top"><pre>function F {
+  print $1</pre></td>
+  <td valign="top"><pre>sub f {
+  my ($i) = @_;
+  print $i;</pre></td>
+  <td valign="top"><pre>def f (i)
+  print(i)</pre></td>
+</tr>
+</table>
 
-<br><br><br>
-<hr><p><small>Master source files for this page: <a href="https://github.com/fordsfords/rstone">https://github.com/fordsfords/rstone</a>.</small></p>
+<p>&nbsp;</p>
+
+<table border="1" cellpadding="2" cellspacing="2" bgcolor="#000000">
+<tr align="left" bgcolor="#E0E0E0">
+  <td valign="top"><b>Feature</b></td>
+  <td valign="top"><b>C</b></td>
+  <td valign="top"><b>C++</b></td>
+  <td valign="top"><b>Java</b></td>
+</tr>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>For</b></td>
+  <td valign="top"><pre>for (i = 3; i <= 8; i++)</pre></td>
+  <td valign="top"><pre>for (i = 3; i <= 8; i++)</pre></td>
+  <td valign="top"><pre>for (i = 3; i <= 8; i++)</pre></td>
+</tr>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>Else if</b></td>
+  <td valign="top"><pre>else if (i == 3)</pre></td>
+  <td valign="top"><pre>else if (i == 3)</pre></td>
+  <td valign="top"><pre>else if (i == 3)</pre></td>
+</tr>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>Function</b></td>
+  <td valign="top"><pre>void f(int i) {
+  printf("%d\n", i);</pre></td>
+  <td valign="top"><pre>void f(int i) {
+  printf("%d\n", i);</pre></td>
+  <td valign="top"><pre>void f(int i) {
+  system.out.println(i);</pre></td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<hr>
+<p><small>Master source files for this page: <a href="https://github.com/fordsfords/rstone">https://github.com/fordsfords/rstone</a>.</small></p>
 </body>
+</html>
