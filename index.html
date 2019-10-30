@@ -39,9 +39,59 @@ for i in arry</pre></td>
   <td valign="top"><pre>sub f {
   my ($i) = @_;
   print $i;</pre></td>
-  <td valign="top"><pre>def f (i)
+  <td valign="top"><pre>def f (i):
   print(i)</pre></td>
 </tr>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>magic input</b></td>
+  <td valign="top"><pre></pre></td>
+  <td valign="top"><pre>while (<>) {</pre></td>
+  <td valign="top"><pre>import fileinput
+for iline in fileinput.input():</pre></td>
+</tr>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>regular expression</b></td>
+  <td valign="top"><pre></pre></td>
+  <td valign="top"><pre>if (/^Error ([\w.]+):/)
+  my $file = $1</pre></td>
+  <td valign="top"><pre>import re
+mo = re.search(r'^Error ([\w.]+):', iline)
+if mo:  # 'mo' = match object
+  file = mo.group(1)</pre></td>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>print without newline</b></td>
+  <td valign="top"><pre>echo -n 'Prompt: '</pre></td>
+  <td valign="top"><pre>print 'Prompt: '</pre></td>
+  <td valign="top"><pre>print('Prompt: ', end='')</pre></td>
+</tr>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>getopts</b></td>
+  <td valign="top"><pre>while getopts "ht:" OPT; do
+  case $OPT in
+    h) help ;;
+    t) temp="$OPTARG" ;;
+    \?) usage ;;</pre></td>
+  esac
+done
+# Make $1 the first positional parm
+shift `expr $OPTIND - 1`</pre></td>
+  <td valign="top"><pre>use vars cq($opt_h $opt_t);
+getopts('ht:') || usage();
+if (defined($opt_h)) { help(); }
+if (defined($opt_t)) { $temp = $opt_t; }
+# @ARGV has options removed, leaving positionals</pre></td>
+  <td valign="top"><pre>import getopt
+try:
+  opts, parms = getopt.getopt(sys.argv[1:], 'ht:')
+except getopt.GetoptError as err:
+  print(str(err))
+  sys.exit(2)
+opts_map = dict(opts)
+if '-h' in opts_map:
+  help()
+if '-t' in opts_map:
+  temp = opts_map['-t']
+# positional parms are in 'parms'</tr>
 </table>
 
 <p>&nbsp;</p>
