@@ -40,9 +40,15 @@ for i in arry</pre></td>
 </tr>
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>Else if</b></td>
-  <td valign="top"><pre>elif [$I -eq 3] ... fi</pre></td>
-  <td valign="top"><pre>elsif ($i eq 3) {</pre></td>
+  <td valign="top"><pre>elif [ $I -eq 3 ] ... fi</pre></td>
+  <td valign="top"><pre>elsif ($i == 3) {</pre></td>
   <td valign="top"><pre>elif i == 3:</pre></td>
+</tr>
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>String cmp</b></td>
+  <td valign="top"><pre>if [ $S = "abc" ] ... fi</pre></td>
+  <td valign="top"><pre>if ($s eq "abc") {</pre></td>
+  <td valign="top"><pre>if s == "abc":</pre></td>
 </tr>
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>Function</b></td>
