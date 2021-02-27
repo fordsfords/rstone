@@ -13,45 +13,70 @@ use "elif" when you should use "elsif", and vice versa.</p>
 <table border="1" cellpadding="2" cellspacing="2" bgcolor="#000000">
 <tr align="left" bgcolor="#E0E0E0">
   <td valign="top"><b>Feature</b></td>
+  <td valign="top"><b>C</b></td>
   <td valign="top"><b>Bash</b></td>
   <td valign="top"><b>Perl</b></td>
   <td valign="top"><b>Python</b></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>For</b></td>
+  <td valign="top"><pre>for (i=0; i<10; i++) {...}</pre></td>
   <td valign="top"><pre>for I in *; do
 for I in {3..8}; do</pre></td>
-  <td valign="top"><pre>for (my $i = 3; $i <= 8; $i++) {
-for my $i (@arry) {</pre></td>
+  <td valign="top"><pre><a href="https://perldoc.perl.org/perlsyn#For-Loops">for</a> (my $i = 3; $i <= 8; $i++) {
+for my $i (@arry) { # same as <a href="https://perldoc.perl.org/perlsyn#Foreach-Loops">foreach</a></pre></td>
   <td valign="top"><pre>arry = range(3, 8+1)
 for i in arry</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>Break</b></td>
+  <td valign="top"><pre>break;</pre></td>
   <td valign="top"><pre>break</pre></td>
-  <td valign="top"><pre>last;</pre></td>
+  <td valign="top"><pre><a href="https://perldoc.perl.org/perlsyn#Loop-Control">last;</a></pre></td>
   <td valign="top"><pre>break</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>Continue</b></td>
+  <td valign="top"><pre>continue;</pre></td>
   <td valign="top"><pre>continue</pre></td>
   <td valign="top"><pre>next;</pre></td>
   <td valign="top"><pre>continue</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
-  <td valign="top"><b>Else if</b></td>
+  <td valign="top"><b>else if</b></td>
+  <td valign="top"><pre>else if ( i == 3 ) ...</pre></td>
   <td valign="top"><pre>elif [ $I -eq 3 ] ... fi</pre></td>
   <td valign="top"><pre>elsif ($i == 3) {</pre></td>
   <td valign="top"><pre>elif i == 3:</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>String cmp</b></td>
+  <td valign="top"><pre>if (strcmp(s,"abc") == 0)
+if (strncmp(s,"abc",sizeof(s)) == 0)</pre></td>
   <td valign="top"><pre>if [ $S = "abc" ] ... fi</pre></td>
   <td valign="top"><pre>if ($s eq "abc") {</pre></td>
   <td valign="top"><pre>if s == "abc":</pre></td>
 </tr>
+
+<tr align="left" bgcolor="#FFFFFF">
+  <td valign="top"><b>Find char in string</b></td>
+  <td valign="top"><pre>char *p=strchr(s, c);
+p=strnchr(s, c, sizeof(s));</pre></td>
+  <td valign="top"><pre></pre></td>
+  <td valign="top"><pre><a href="https://perldoc.perl.org/functions/index">i=index(s, c);
+i=index(s, c, s_offset);</a></pre></td>
+  <td valign="top"><pre></pre></td>
+</tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>Function</b></td>
+  <td valign="top"><pre>void f(int i) {
+  printf("%d\n", i);</pre></td>
   <td valign="top"><pre>function F {
   print $1</pre></td>
   <td valign="top"><pre>sub f {
@@ -60,31 +85,51 @@ for i in arry</pre></td>
   <td valign="top"><pre>def f (i):
   print(i)</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
-  <td valign="top"><b>magic input</b></td>
+  <td valign="top"><b><a href="https://blog.geeky-boy.com/2020/07/perl-diamond-operator.html">magic input</a></b></td>
+  <td valign="top"><pre></pre></td>
   <td valign="top"><pre></pre></td>
   <td valign="top"><pre>while (<>) {</pre></td>
   <td valign="top"><pre>import fileinput
 for iline in fileinput.input():</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>regular expression</b></td>
   <td valign="top"><pre></pre></td>
+  <td valign="top"><pre>if echo $ILINE |
+  grep "Error " >/dev/null
+then echo "match"
+fi</pre></td>
   <td valign="top"><pre>if (/^Error ([\w.]+):/)
   my $file = $1</pre></td>
   <td valign="top"><pre>import re
 mo = re.search(r'^Error ([\w.]+):', iline)
-if mo:  # 'mo' = match object
+if mo:  # mo is match object
   file = mo.group(1)</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>print without newline</b></td>
+  <td valign="top"><pre>printf("Prompt: ');</pre></td>
   <td valign="top"><pre>echo -n 'Prompt: '</pre></td>
   <td valign="top"><pre>print 'Prompt: '</pre></td>
   <td valign="top"><pre>print('Prompt: ', end='')</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>getopts</b></td>
+  <td valign="top"><pre>while((opt=getopt(argc,argv,"ht:")!=EOF){
+  switch (opt) {
+    case 'h': help(); break;
+    case 't': t = atoi(optarg); break;
+    default: usage();
+  }
+}
+while (optind < argc) {
+  printf("positional:%s\n",argv[optind]);
+}</pre></td>
   <td valign="top"><pre>while getopts "ht:" OPT; do
   case $OPT in
     h) help ;;
@@ -92,16 +137,16 @@ if mo:  # 'mo' = match object
     \?) usage ;;
   esac
 done
-# Make $1 the first positional parm
+# First positional to $1
 shift `expr $OPTIND - 1`</pre></td>
   <td valign="top"><pre>use vars cq($opt_h $opt_t);
 getopts('ht:') || usage();
 if (defined($opt_h)) { help(); }
 if (defined($opt_t)) { $temp = $opt_t; }
-# @ARGV has options removed, leaving positionals</pre></td>
+# @ARGV: options gone, positionals left</pre></td>
   <td valign="top"><pre>import getopt
 try:
-  opts, parms = getopt.getopt(sys.argv[1:], 'ht:')
+  opts,parms=getopt.getopt(sys.argv[1:],'ht:')
 except getopt.GetoptError as err:
   print(str(err))
   sys.exit(2)
@@ -114,6 +159,8 @@ if '-t' in opts_map:
 </table>
 
 <p>&nbsp;</p>
+<hr>
+<p>&nbsp;</p>
 
 <table border="1" cellpadding="2" cellspacing="2" bgcolor="#000000">
 <tr align="left" bgcolor="#E0E0E0">
@@ -122,12 +169,14 @@ if '-t' in opts_map:
   <td valign="top"><b>C++</b></td>
   <td valign="top"><b>Java</b></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>For</b></td>
   <td valign="top"><pre>for (i = 3; i <= 8; i++)</pre></td>
   <td valign="top"><pre>for (i = 3; i <= 8; i++)</pre></td>
   <td valign="top"><pre>for (i = 3; i <= 8; i++)</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>Else if</b></td>
   <td valign="top"><pre>else if (i == 3)
@@ -136,6 +185,7 @@ if '-t' in opts_map:
 #if ... #elif ... #endif</pre></td>
   <td valign="top"><pre>else if (i == 3)</pre></td>
 </tr>
+
 <tr align="left" bgcolor="#FFFFFF">
   <td valign="top"><b>Function</b></td>
   <td valign="top"><pre>void f(int i) {
