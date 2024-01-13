@@ -10,4 +10,6 @@ for F in *.md; do :
   fi
 done
 
-javac JavaThreads.java; if [ "$?" -ne 0 ]; then exit 1; fi
+gcc -o c_linux_getopts c_linux_getopts.c;  if [ "$?" -ne 0 ]; then exit 1; fi
+
+javac JavaThreads.java;  if [ "$?" -ne 0 ]; then exit 1; fi
