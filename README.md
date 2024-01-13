@@ -20,7 +20,7 @@ Function | void f(int i) { | F () {; $1 | sub f { my ($i) = @_; | def f (i)
 magic input | n.a. | n.a. | while (<>) { | import fileinput<br>for iline in fileinput.input():
 regexp | n.a. | if echo $S | grep "pat" >/dev/null | if (/pat/)<br>if ($s=~/pat/) | import re<br>mo = re.search(r'pat', s)<br>if mo:
 print no nl | printf("prompt: "); | echo -n "prompt: " | print "prompt: "; print("prompt: ", end='')
-getopts | while((opt=getopt(argc,argv,"t:")!=EOF){<br>switch (opt) {<br> case 't': t = atoi(optarg); break;<br>}<br>} | while getopts "t:" OPT; do<br>case $OPT in<br> t) temp="$OPTARG" ;;<br>esac<br>done | import getopt<br>try:<br> opts,parms=getopt.getopt(sys.argv[1:],'t:')<br> except getopt.GetoptError as err:<br> opts_map = dict(opts)<br> if '-t' in opts_map:<br> temp = opts_map['-t']
+getopts | while((o=getopt(argc,argv,"t:")!=EOF){<br>switch (o) {<br> case 't': t = atoi(optarg); break;<br>}<br>} | while getopts "t:" OPT<br>do case $OPT in<br> t) temp="$OPTARG" ;;<br>esac<br>done | import getopt<br>try:<br> opts,parms=getopt.getopt(sys.argv[1:],'t:')<br> except getopt.GetoptError as err:<br> opts_map = dict(opts)<br> if '-t' in opts_map:<br> temp = opts_map['-t']
 
 ## License
 
