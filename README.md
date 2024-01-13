@@ -2,7 +2,10 @@
 My programming rosetta stone.
 
 <!-- mdtoc-start -->
-&DoubleRightArrow; [rstone](#techo)  
+&bull; [rstone](#rstone)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [My Rosetta Stone](#my-rosetta-stone)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [License](#license)  
+&nbsp;&nbsp;&nbsp;&nbsp;&bull; [Introduction](#introduction)  
 <!-- TOC created by '../mdtoc/mdtoc.pl README.md' (see https://github.com/fordsfords/mdtoc) -->
 <!-- mdtoc-end -->
 
@@ -21,7 +24,7 @@ magic input | n.a. | n.a. | while (<>) { | import fileinput<br>for iline in file
 regexp | n.a. | if echo $S \| grep "pat" >/dev/null | if (/pat/)<br>if ($s=~/pat/) | import re<br>mo = re.search(r'pat', s)<br>if mo:
 print no nl | printf("prompt: "); | echo -n "prompt: " | print "prompt: "; | print("prompt: ", end='')
 getopts | [c_unix_getopts.c](c_unix_getopts.c) | [bash_getops.sh](bash_getops.sh) | [perl_getops.pl](perl_getops.pl) | [python_getops.py](python_getops.py) 
-threads | [c_unix_threads.c](c_unix_threads.c) | [bash_threads.c](bash_threads.c) | [java_threads.java](java_threads.java) | [python_threads.py](python_threads.py) 
+threads | [c_unix_threads.c](c_unix_threads.c) | [bash_threads.c](bash_threads.c) | [JavaThreads.java](JavaThreads.java) | [python_threads.py](python_threads.py) 
 
 ## License
 
