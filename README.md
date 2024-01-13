@@ -20,7 +20,8 @@ Function | void f(int i) { | F () {; $1 | sub f { my ($i) = @_; | def f (i)
 magic input | n.a. | n.a. | while (<>) { | import fileinput<br>for iline in fileinput.input():
 regexp | n.a. | if echo $S \| grep "pat" >/dev/null | if (/pat/)<br>if ($s=~/pat/) | import re<br>mo = re.search(r'pat', s)<br>if mo:
 print no nl | printf("prompt: "); | echo -n "prompt: " | print "prompt: "; | print("prompt: ", end='')
-getopts | 
+getopts | [c_unix_getopts.c](c_unix_getopts.c) | [bash_getops.sh](bash_getops.sh) | [perl_getops.pl](perl_getops.pl) | [python_getops.py](python_getops.py) 
+threads | [c_unix_threads.c](c_unix_threads.c) | [bash_threads.c](bash_threads.c) | [java_threads.java](java_threads.java) | [python_threads.py](python_threads.py) 
 
 ## License
 
