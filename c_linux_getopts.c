@@ -1,4 +1,4 @@
-/* c_linux_getopts.c - example parsing of command line.
+/* c_linux_getopts.c - demonstrate command-ine parsing in C/Linux
  * See https://github.com/fordsfords/rstone
  */
 /*
@@ -98,7 +98,7 @@ cmd_line_t *cmd_line_create(int argc, char **argv)
   }  /* while getopt */
 
   if (optind == argc) {
-    cmd_line_usage("Missing input file");
+    cmd_line_usage("Missing inputfile");
   }
   else {
     free(cmd_line->input_file);

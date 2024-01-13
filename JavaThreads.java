@@ -13,27 +13,29 @@ class JavaThreads {
 
   private void run(String[] args) {
     System.out.println("main: Starting");
-    MyThingie thingie = new MyThingie(2);
-    thingie.start();
+    PrintThread myPrintThread = new PrintThread(2);
+    myPrintThread.start();
+
     System.out.println("main: Sleeping 4.1 seconds");
     try { Thread.sleep(4100); } catch (Exception e) {}
+
     System.out.println("main: Terminating");
-    thingie.terminate();
+    myPrintThread.terminate();
     System.out.println("main: Done");
   }  // run
 } // JavaThreads
 
 
-class MyThingie implements Runnable {
+class PrintThread implements Runnable {
   private Thread thisThread;
   private int printIntervalSec;
   private boolean running;
 
-  public MyThingie() {
+  public PrintThread() {
     this(1);  // default print interval.
   }
 
-  public MyThingie(int printIntervalSec) {
+  public PrintThread(int printIntervalSec) {
     this.printIntervalSec = printIntervalSec;
     thisThread = null;
     running = false;
@@ -58,12 +60,13 @@ class MyThingie implements Runnable {
     int secsSinceLastPrint = 0;
     while (running) {
       if (secsSinceLastPrint >= printIntervalSec) {
-        System.out.println("MyThingie: Hi");
+        System.out.println("PrintThread: Hi");
         secsSinceLastPrint = 0;
       }
       try { Thread.sleep(1000); } catch (Exception e) {}
       secsSinceLastPrint++;
     }  // while running
-    System.out.println("MyThingie: Bye");
+
+    System.out.println("PrintThread: Bye");
   }  // run
-} // MyThingie
+} // PrintThread

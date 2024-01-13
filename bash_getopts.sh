@@ -1,5 +1,5 @@
 #!/bin/sh
-# bash_getopts.sh
+# bash_getopts.sh - demonstrate command-line parsing in bash.
 # See https://github.com/fordsfords/rstone
 #
 # This code and its documentation is Copyright 2023,2024 Steven Ford
@@ -15,7 +15,7 @@ usage() {
   if [ "$1" != "" ]; then :
     echo "$1" 1>&2
   fi
-  echo "Usage: bash_getopts [-h] [-t testnum] input_file" 1>&2; echo "" 1>&2
+  echo "Usage: bash_getopts [-h] [-t testnum] inputfile" 1>&2; echo "" 1>&2
   exit 1
 }
 
@@ -24,11 +24,11 @@ help() {
   if [ "$1" != "" ]; then echo "$TOOL: $1"; echo ""; fi
 
   cat <<__EOF__
-Usage: bash_getopts [-h] [-t testnum] input_file
+Usage: bash_getopts [-h] [-t testnum] inputfile
 Where:
   -h - help (prints this help text)
   -t testnum : number of test to perform
-  input_file : required positional parameter\n"
+  inputfile : required positional parameter\n"
 __EOF__
   exit 0
 }  # help
@@ -49,8 +49,8 @@ do
 done
 shift `expr $OPTIND - 1`  # Make $1 the first positional param after options
 
-if [ "$1" = "" ]; then usage "Missing in_file"; fi
-INPUT_FILE="$1"
+if [ "$1" = "" ]; then usage "Missing inputfile"; fi
+INPUTFILE="$1"
 shift 1  # Make $1 the next positional param
 
 if [ "$1" != "" ]; then usage "Unrecognized parameter '$1'"; fi
@@ -59,6 +59,6 @@ if [ "$1" != "" ]; then usage "Unrecognized parameter '$1'"; fi
 # MAIN CODE
 ##############################################################################
 
-echo "TESTNUM=$TESTNUM, INPUT_FILE='$INPUT_FILE'"
+echo "TESTNUM=$TESTNUM, INPUTFILE='$INPUTFILE'"
 
 exit 0
