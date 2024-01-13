@@ -15,7 +15,7 @@ Break   | break; | break | [last](https://perldoc.perl.org/perlsyn#Loop-Control)
 Continue| continue; | continue | next; | continue
 Else if | else if () | elif [ ] | elsif () | elif
 String cmp | if (strcmp(s,"abc")==0) | if [ "$S" = "abc" ] | if ($s eq "abc") | if s == "abc"
-Find char | p=strchr(s, c);<br>p=strnchr(s, c, l) | n.a. | i=[index(s, c)](https://perldoc.perl.org/functions/index); i=index(s, c, s_offset);</a> | ???
+Find char | p=strchr(s, c);<br>p=strnchr(s, c, l) | n.a. | i=[index(s, c)](https://perldoc.perl.org/functions/index);<br>i=index(s, c, s_offset);</a> | ???
 Function | void f(int i) { | F () {; $1 | sub f { my ($i) = @_; | def f (i)
 magic input | n.a. | n.a. | while (<>) { | import fileinput<br>for iline in fileinput.input():
 regexp | n.a. | if echo $S | grep "pat" >/dev/null | if (/pat/)<br>if ($s=~/pat/) | import re<br>mo = re.search(r'pat', s)<br>if mo:
