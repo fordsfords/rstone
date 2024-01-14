@@ -25,6 +25,7 @@ regexp | n.a. | if echo $S \| grep "pat" >/dev/null | if (/pat/)<br>if ($s=~/pat
 print no nl | printf("prompt: "); | echo -n "prompt: " | print "prompt: "; | print("prompt: ", end='')
 getopts | [c_linux_getopts.c](c_linux_getopts.c) | [bash_getopts.sh](bash_getopts.sh) | [perl_getotps.pl](perl_getotps.pl) | [python_getotps.py](python_gettops.py) 
 threads | [c_linux_threads.c](c_linux_threads.c) | [bash_threads.sh](bash_threads.sh) | [JavaThreads.java](JavaThreads.java) | [python_threads.py](python_threads.py) 
+Feature | C | Bash | Perl | Python
 
 ## License
 
