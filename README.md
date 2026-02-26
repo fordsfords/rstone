@@ -13,7 +13,7 @@ My programming rosetta stone.
 
 Feature | C | Bash | Perl | Python
 --------|---|------|------|-------
-For     | for (i=0; i<10; i++) {} | for I in *; do <br> for I in {3..8}; do | [for](https://perldoc.perl.org/perlsyn#For-Loops) (my $i = 3; $i <= 8; $i++) { <br> foreach my $i (@array) { | for i in array
+For     | for (i=0; i<10; i++) {} | for I in *; do <br> for I in {3..8}; do <br>for ((I=0; I<8; I++)); do | [for](https://perldoc.perl.org/perlsyn#For-Loops) (my $i = 3; $i <= 8; $i++) { <br> foreach my $i (@array) { | for i in array
 Break   | break; | break | [last](https://perldoc.perl.org/perlsyn#Loop-Control) | break
 Continue| continue; | continue | next; | continue
 Else if | else if () | elif [ ] | elsif () | elif
